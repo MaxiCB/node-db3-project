@@ -1,6 +1,6 @@
 const express = require('express');
 
-const Schemes = require('./scheme-model.js');
+const Schemes = require('./scheme-model');
 
 const router = express.Router();
 
