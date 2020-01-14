@@ -23,3 +23,15 @@ join [Customer] as c
     on o.CustomerId = c.Id
 join [Employee] as e
     on o.EmployeeId = e.Id
+
+-- Stretch Goals --
+SELECT COUNT(*) TotalCount, p.CategoryID, c.CategoryID
+from Products as p
+join Categories as c
+	 on c.CategoryID = p.CategoryID
+where p.CategoryID = c.CategoryID
+group by p.CategoryID, c.CategoryID
+-- --
+SELECT COUNT(*) TotalCount, p.OrderID, p.Quantity
+from OrderDetails as p
+group by p.OrderID
